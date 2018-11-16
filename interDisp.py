@@ -49,7 +49,7 @@ plt.plot(Disp,Rh,"o")
 plt.plot(Disp_n,LhN,"o")
 plt.plot(Disp_n,RhN,"o")
 
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.interpolation('Histogram of IQ')
+#plt.xlabel('X')
+#plt.ylabel('Y')
+#plt.interpolation('Histogram of IQ')
 
