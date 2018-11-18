@@ -4,9 +4,16 @@ Created on Thu Jul 26 11:53:08 2018
 
 @author: bmusammartanoV
 """
+
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import interp1d
+
+def clearScreen():
+ import os
+ os.system("clear")
+ os.system("reset -f")
+clearScreen()
 
 #data acquisition
 file = "int.csv" #name of the file to be opened 
