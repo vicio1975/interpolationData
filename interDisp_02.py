@@ -18,7 +18,7 @@ def clearScreen():
 
 def eq_fit(n,x,y,nv):
     s = "" #equation string
-    N = 6
+    N = 10
     coeff = np.polyfit(x, y, N)
     Y = np.poly1d(coeff)
 
@@ -35,11 +35,11 @@ def eq_fit(n,x,y,nv):
     print("\nThe equation for ",n," =\n",s)
     print("\nRoot mean square Error = ", RMS_error)
     fig.subplots_adjust(hspace=0.5) 
-    return s, RMS_error
+    return s, RMS_error, Y
 
 
 #data acquisition
-file = "dp.txt" #name of the file to be opened 
+file = "fan_FR451.txt" #name of the file to be opened 
 fid = open(file,"r+")
 velocity = []
 dp = []
@@ -58,6 +58,6 @@ DP  = np.asarray(dp)
 fig, axs = plt.subplots(2,figsize=(10,10))
 
 if __name__ == '__main__':
-    eq_fit("Density",Vel, DP,0)
-    
+    A = eq_fit("Fan Curve FR451",Vel, DP,0)
+    print(A)
     plt.show()
